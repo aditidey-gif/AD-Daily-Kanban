@@ -16,7 +16,11 @@ Based on my project flowchart, the app follows a hierarchical structure:
 <img width="863" height="489" alt="image" src="https://github.com/user-attachments/assets/b74a5cc3-cee7-48b0-8930-ecd64aa1d54b" />
 
 **🔄 The Connection:** store.js --> dragDrop.js. 
+
 In the flowchart, you’ll notice an arrow pointing from the Store to DragDrop. This represents Data Persistence.
+
 When you physically move a card in the UI, dragDrop.js catches it.
+
 dragDrop.js then calls a function in store.js to update that task's status in the database.
+
 Result: If you move a task to "Done" and refresh the page, it stays in "Done."
