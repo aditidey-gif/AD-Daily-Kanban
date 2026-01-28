@@ -31,9 +31,11 @@ The store.js file serves as the Data Access Layer for the Kanban application. It
     **Output:** Returns an array of task objects specifically for the selected day.
 
 
-3. saveTasks(allTasks)
-Definition: An internal helper function responsible for the final "Write" to memory.
+**3. saveTasks(allTasks)**
 
-The Logic: Since localStorage can only store strings, this function uses JSON.stringify(allTasks) to "vacuum-pack" the entire task array into a single text block.
+  **Definition:** An internal helper function responsible for the final "Write" to memory.
 
-The Action: It overwrites the existing data in the STORAGE_KEY drawer with the new, updated string.
+    **The Logic:** Since localStorage can only store strings, this function uses JSON.stringify(allTasks) to "vacuum-
+    pack" the entire task array into a single text block.
+
+    **The Action:** It overwrites the existing data in the STORAGE_KEY drawer with the new, updated string.
