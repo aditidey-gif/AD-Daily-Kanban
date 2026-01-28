@@ -81,9 +81,9 @@ The store.js file serves as the Data Access Layer for the Kanban application. It
     **Persistence:** It calls saveTasks() to overwrite the old data with the updated status, ensuring the move is
     remembered after a page refresh.
 
-**Why this function is vital for your Flowchart:**
+**Why this function is vital for Flowchart:**
 
-In your PowerPoint flowchart, this function is the "bridge" between dragDrop.js and store.js.
+In PowerPoint flowchart, this function is the "bridge" between dragDrop.js and store.js.
 
   i) dragDrop.js detects that you dropped a card into a new column.
 
