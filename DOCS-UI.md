@@ -5,6 +5,7 @@ interface, responsible for translating raw JavaScript data into a visual, intera
 visual logic here, the application ensures that how a task looks is completely separate from how it is stored.
 
 **Core Responsibilities**
+
   **DOM Orchestration:** It manages the Document Object Model (DOM), handling the creation, removal, and updating of
   HTML elements dynamically.
   
