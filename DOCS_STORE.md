@@ -42,6 +42,7 @@ The store.js file serves as the Data Access Layer for the Kanban application. It
 
 
 **4. addTask(content, date, priority)**
+
   **Definition:** The "Factory" function that creates new task entries.
 
   **Step-by-Step Logic:**
@@ -61,3 +62,21 @@ The store.js file serves as the Data Access Layer for the Kanban application. It
             **priority:** The selected importance level (defaults to 'medium').
 
     **iii) Persistence:** It pushes the new task into the array and calls saveTasks() to make it permanent.
+
+
+**5. updateTaskStatus(id, newStatus)**
+
+  **Definition:** The "Mover" function that handles task transitions between columns.
+
+  **Step-by-Step Logic:**
+
+    **State Retrieval:** It accesses the central task array from localStorage.
+    
+    **Task Identification:** It searches the array for a specific task using the .find() method, ensuring the id is
+    treated as a number for a perfect match.
+    
+    **Status Modification:** Once the correct task is located, it updates the status property to the newStatus
+    (e.g., moving it from 'todo' to 'doing').
+    
+    **Persistence:** It calls saveTasks() to overwrite the old data with the updated status, ensuring the move is
+    remembered after a page refresh.
