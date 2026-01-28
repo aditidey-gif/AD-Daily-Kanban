@@ -16,17 +16,19 @@ The store.js file serves as the Data Access Layer for the Kanban application. It
 
 
 **2. getTasks(filterDate)**
-**Definition:** The primary "Read" function for the database.
 
-**The Logic:**
+  **Definition:** The primary "Read" function for the database.
 
-**Retrieval:** It fetches the raw JSON string from localStorage using the STORAGE_KEY.
+    **The Logic:**
 
-**Parsing:** It converts that text back into a JavaScript Array using JSON.parse().
+    **Retrieval:** It fetches the raw JSON string from localStorage using the STORAGE_KEY.
 
-**Filtering:** It uses the .filter() method to extract only the tasks where the task.date matches the filterDate provided.
+    **Parsing:** It converts that text back into a JavaScript Array using JSON.parse().
 
-**Output:** Returns an array of task objects specifically for the selected day.
+    **Filtering:** It uses the .filter() method to extract only the tasks where the task.date matches the filterDate
+    provided.
+
+    **Output:** Returns an array of task objects specifically for the selected day.
 
 
 3. saveTasks(allTasks)
