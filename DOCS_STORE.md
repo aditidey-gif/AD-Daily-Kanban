@@ -7,9 +7,11 @@ The store.js file serves as the Data Access Layer for the Kanban application. It
 **1. getToday()**
     **Definition:** A utility function that standardizes the current system date.
 
-    **The Logic:** It takes a new Date() object, converts it to an ISO string, and splits it at the "T" to extract       only the YYYY-MM-DD portion.
+    **The Logic:** It takes a new Date() object, converts it to an ISO string, and splits it at the "T" to extract
+    only the YYYY-MM-DD portion.
 
-    **Why it's used:** To ensure the application always opens to a consistent "Current Day" view and to provide a        standardized date format for database filtering.
+    **Why it's used:** To ensure the application always opens to a consistent "Current Day" view and to provide a
+    standardized date format for database filtering.
 
 
 **2. getTasks(filterDate)**
