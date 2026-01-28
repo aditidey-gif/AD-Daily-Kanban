@@ -90,3 +90,22 @@ In PowerPoint flowchart, this function is the "bridge" between dragDrop.js and s
   ii) It tells updateTaskStatus: "Hey, Task #123 is now in 'Done'."
 
   iii) This function updates the "Brain" (Store) so the data matches what you see on the screen.
+
+
+**6. deleteTask(id)**
+
+  **Definition:** The "Janitor" function that permanently removes a task from the database.
+
+  **Step-by-Step Logic:**
+
+    **State Retrieval:** It pulls the current master list of tasks from localStorage.
+    
+    **Filtering Logic:** It uses the .filter() method to create a brand-new array. It iterates through every task
+    and only "keeps" the ones that do not match the provided id. Essentially, it drops the unwanted task from the
+    collection.
+    
+    **ID Normalization:** It wraps the id in Number() to ensure that even if the ID comes from the HTML as a
+    string, it matches the numeric ID stored in the database.
+    
+    **Persistence:** It calls saveTasks() with the new, shorter list, effectively erasing the specific task from
+    the browser's memory.
